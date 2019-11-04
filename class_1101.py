@@ -100,7 +100,7 @@ ls.extend([555,666,555])
 print("ls.extend([555,666,555]) 후의 리스트 : ",ls)
 
 print("555값의 개수 : ",ls.count(555))
-'''
+''''''
 #1
 ls = [10,5,20,7,9,31,12,11,19,32]
 print("1. ls : ",ls)
@@ -133,20 +133,26 @@ print("4. 뺀 결과 : ",result_sub)
 invertLS=[]
 for i in range(len(ls)):
     invertLS.append(ls.pop())
-print("5. inverLS : ",invertLS)
+print("5-1. invertLS : ",invertLS)
+ls = [10,5,20,7,9,31,12,11,19,32]
+invertLS=[]
+for i in range(1,11):
+    i*=-1
+    invertLS.append(ls[i])
+print("5-2. invertLS : ",invertLS)
 #4.
 ls = [10,5,20,7,9,31,12,11,19,32]#위에서 pop()으로 다 날렸기 때문에 새로 선언
+sortLS = ls[:]#깊은 복사
 for i in range(len(ls)-1):
    for j in range(i+1,len(ls)):
-       if ls[i]>ls[j]:
-           ls[i],ls[j]=ls[j],ls[i]
-sortLS=ls
+       if sortLS[i]>sortLS[j]:
+           sortLS[i],sortLS[j]=sortLS[j],sortLS[i]
 print("6. sortLS : ",sortLS)
 #5.
-ls = [10,5,20,7,9,31,12,11,19,32]
+reverseLS = ls[:]
 for i in range(len(ls)-1):
    for j in range(i+1,len(ls)):
-       if ls[i]<ls[j]:
-           ls[i],ls[j]=ls[j],ls[i]
-reverseLS = ls
+       if reverseLS[i]<reverseLS[j]:
+           reverseLS[i],reverseLS[j]=reverseLS[j],reverseLS[i]
 print("7. reverseLS : ",reverseLS)
+'''
