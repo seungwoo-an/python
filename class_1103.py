@@ -146,7 +146,7 @@ while bl:
             print("="*30)
             print("삭제할 목적지가 없습니다.")
             continue
-        des=input("수정할 목적지 입력 : ")
+        des=input("삭제할 목적지 입력 : ")
         if navi.get(des)==None:
             print("="*30)
             print(navi.get(des,'삭제할 목적지가 없습니다.'))
